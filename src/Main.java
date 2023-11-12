@@ -3,8 +3,6 @@ import objects.Handcrafts;
 import objects.Stairs;
 import people.*;
 
-import java.util.Objects;
-
 public class Main {
 
     public static void main(String[] args) {
