@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Location {
+public interface DestinationChangeable {
 
     void changeDestination(String new_destination);
 

@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Junk {
+public interface Spoilable {
 
     public static final String desription = "Вещь, надоевшая их прежним хозяевам";
 

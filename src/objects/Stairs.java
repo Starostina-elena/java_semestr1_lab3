@@ -1,12 +1,12 @@
 package objects;
 
 
-import interfaces.Location;
+import interfaces.DestinationChangeable;
 
 import java.util.Objects;
 
 
-public class Stairs implements Location {
+public class Stairs implements DestinationChangeable {
 
     private DestinationEnum destination;
 

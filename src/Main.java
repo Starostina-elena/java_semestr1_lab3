@@ -32,13 +32,13 @@ public class Main {
         Stairs stairs2 = new Stairs("вниз");
         System.out.println(stairs2);
 
-        HandcraftsTextile paper_trash = new HandcraftsTextile("ткань");
+        Textile paper_trash = new Textile("ткань");
         System.out.println(paper_trash);
         System.out.println(paper_trash.spoil());
-        HandcraftsPaper textile_trash = new HandcraftsPaper("бумага");
+        Paper textile_trash = new Paper("бумага");
         System.out.println(textile_trash);
         System.out.println(textile_trash.spoil());
-        HandcraftsWood wooden_trash = new HandcraftsWood("дерево");
+        Wood wooden_trash = new Wood("дерево");
         System.out.println(wooden_trash);
         System.out.println(wooden_trash.spoil());
 

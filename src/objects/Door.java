@@ -1,12 +1,12 @@
 package objects;
 
 
-import interfaces.Location;
+import interfaces.DestinationChangeable;
 
 import java.util.Objects;
 
 
-public class Door implements Location {
+public class Door implements DestinationChangeable {
 
     private DestinationEnum destination;
 
