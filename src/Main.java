@@ -1,6 +1,4 @@
-import objects.Door;
-import objects.Handcrafts;
-import objects.Stairs;
+import objects.*;
 import people.*;
 
 public class Main {
@@ -34,12 +32,15 @@ public class Main {
         Stairs stairs2 = new Stairs("вниз");
         System.out.println(stairs2);
 
-        Handcrafts paper_trash = new Handcrafts("бумага");
+        HandcraftsTextile paper_trash = new HandcraftsTextile("ткань");
         System.out.println(paper_trash);
-        Handcrafts textile_trash = new Handcrafts("ткань");
+        System.out.println(paper_trash.spoil());
+        HandcraftsPaper textile_trash = new HandcraftsPaper("бумага");
         System.out.println(textile_trash);
-        Handcrafts wooden_trash = new Handcrafts("дерево");
+        System.out.println(textile_trash.spoil());
+        HandcraftsWood wooden_trash = new HandcraftsWood("дерево");
         System.out.println(wooden_trash);
+        System.out.println(wooden_trash.spoil());
 
         misa.behave_as_somebody_else(homsa);
         System.out.println(misa);
