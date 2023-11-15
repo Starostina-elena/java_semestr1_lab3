@@ -8,6 +8,10 @@ public class PreviousOwners extends Person {
         super(name, action);
     }
 
+    public String packStuff() {
+        return this.getName() + " пакует свои вещи и готовиться съезжать";
+    }
+
     @Override
     public String toString() {
         return super.toString() + "!";

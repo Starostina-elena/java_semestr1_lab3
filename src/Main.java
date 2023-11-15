@@ -9,14 +9,20 @@ public class Main {
 
         Hemyl hemyl = new Hemyl("Хемуль", "поет");
         System.out.println(hemyl);
-        Homsa homsa = new Homsa("Хомса", "танцует");
+        System.out.println(hemyl.fly());
+        Homsa homsa = new Homsa("Хомса", "танцует", 10);
         System.out.println(homsa);
+        System.out.println(homsa.eatCookies());
+        System.out.println(homsa.addCookies(5));
         Misa misa = new Misa("Миса", "сеет хаос");
         System.out.println(misa);
+        System.out.println(misa.sing());
         Mymla mymla = new Mymla("Мюмла", "подмигивает");
         System.out.println(mymla);
+        System.out.println(mymla.grumble());
         PreviousOwners previousOwner = new PreviousOwners("Василий", "грустно вздыхает");
         System.out.println(previousOwner);
+        System.out.println(previousOwner.packStuff());
 
         Door door1 = new Door("в Нарнию");
         System.out.println(door1);

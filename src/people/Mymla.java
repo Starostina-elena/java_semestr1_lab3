@@ -8,6 +8,10 @@ public class Mymla extends Person {
         super(name, action);
     }
 
+    public String grumble() {
+        return this.getName() + " недовольно бурчит";
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", одним словом, обычный вторник";

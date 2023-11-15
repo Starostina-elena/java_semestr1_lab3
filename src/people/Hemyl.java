@@ -8,6 +8,10 @@ public class Hemyl extends Person {
         super(name, action);
     }
 
+    public String fly() {
+        return this.getName() + " расправляет крылья и взлетает";
+    }
+
     @Override
     public String toString() {
         return super.toString() + "?";

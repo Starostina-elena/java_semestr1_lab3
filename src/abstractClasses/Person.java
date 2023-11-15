@@ -25,6 +25,10 @@ public abstract class Person {
         madness = false;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         if (madness) {
