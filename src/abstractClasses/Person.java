@@ -4,33 +4,33 @@ import java.util.Objects;
 
 public abstract class Person {
 
-    private String person_action;
-    private final String original_person_action;
+    private String personAction;
+    private final String originalPersonAction;
     private final String name;
     boolean madness = false;
 
     public Person(String name, String action) {
-        original_person_action = action;
-        person_action = action;
+        originalPersonAction = action;
+        personAction = action;
         this.name = name;
     }
 
     public void behave_as_somebody_else(Person person) {
-        person_action = person.person_action;
+        personAction = person.personAction;
         madness = true;
     };
 
     public void calm_down() {
-        person_action = original_person_action;
+        personAction = originalPersonAction;
         madness = false;
     }
 
     @Override
     public String toString() {
         if (madness) {
-            return name + " бесится и " + person_action;
+            return name + " бесится и " + personAction;
         }
-        return name + " " + person_action;
+        return name + " " + personAction;
     }
 
     @Override
@@ -38,12 +38,12 @@ public abstract class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return madness == person.madness && Objects.equals(person_action, person.person_action) && Objects.equals(original_person_action, person.original_person_action) && Objects.equals(name, person.name);
+        return madness == person.madness && Objects.equals(personAction, person.personAction) && Objects.equals(originalPersonAction, person.originalPersonAction) && Objects.equals(name, person.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(person_action, original_person_action, name, madness);
+        return Objects.hash(personAction, originalPersonAction, name, madness);
     }
 
 }
