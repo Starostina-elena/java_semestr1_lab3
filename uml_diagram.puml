@@ -1,0 +1,106 @@
+@startuml
+class objects.HandcraftsWood {
+- String material
++ String spoil()
++ String toString()
++ boolean equals(Object)
++ int hashCode()
+}
+interface interfaces.Location {
+~ void changeDestination(String)
+~ String toString()
+~ boolean equals(Object)
+~ int hashCode()
+}
+class people.Hemyl {
++ String fly()
++ String toString()
+}
+abstract class abstractClasses.Person {
+- String personAction
+- String originalPersonAction
+- String name
+~ boolean madness
++ void behave_as_somebody_else(Person)
++ void calm_down()
++ String getName()
++ String toString()
++ boolean equals(Object)
++ int hashCode()
+}
+class people.PreviousOwners {
++ String packStuff()
++ String toString()
+}
+class people.Mymla {
++ String grumble()
++ String toString()
+}
+enum objects.DestinationEnum {
++  SOMEWHERE
++  NOWHERE
++  UP
++  DOWN
+- String destination
+}
+class objects.HandcraftsTextile {
+- String material
++ String spoil()
++ String toString()
++ boolean equals(Object)
++ int hashCode()
+}
+class objects.HandcraftsPaper {
+- String material
++ String spoil()
++ String toString()
++ boolean equals(Object)
++ int hashCode()
+}
+class objects.Door {
+- DestinationEnum destination
++ void changeDestination(String)
++ String toString()
++ boolean equals(Object)
++ int hashCode()
+}
+class objects.Stairs {
+- DestinationEnum destination
++ void changeDestination(String)
++ String toString()
++ boolean equals(Object)
++ int hashCode()
+}
+class people.Misa {
++ String sing()
++ String toString()
+}
+class Main {
++ {static} void main(String[])
+}
+interface interfaces.Junk {
++ {static} String desription
+~ String spoil()
+~ String toString()
+~ boolean equals(Object)
+~ int hashCode()
+}
+class people.Homsa {
+- int numberOfCookies
++ String eatCookies()
++ String addCookies(int)
++ String toString()
+}
+
+
+interfaces.Junk <|.. objects.HandcraftsWood
+abstractClasses.Person <|-- people.Hemyl
+abstractClasses.Person <|-- people.PreviousOwners
+abstractClasses.Person <|-- people.Mymla
+interfaces.Junk <|.. objects.HandcraftsTextile
+interfaces.Junk <|.. objects.HandcraftsPaper
+interfaces.Location <|.. objects.Door
+interfaces.Location <|.. objects.Stairs
+abstractClasses.Person <|-- people.Misa
+abstractClasses.Person <|-- people.Homsa
+@enduml
