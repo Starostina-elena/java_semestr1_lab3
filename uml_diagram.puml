@@ -1,19 +1,14 @@
 @startuml
-class objects.HandcraftsWood {
-- String material
+class objects.Textile {
 + String spoil()
 + String toString()
-+ boolean equals(Object)
-+ int hashCode()
-}
-interface interfaces.Location {
-~ void changeDestination(String)
-~ String toString()
-~ boolean equals(Object)
-~ int hashCode()
 }
 class people.Hemyl {
 + String fly()
++ String toString()
+}
+class objects.Wood {
++ String spoil()
 + String toString()
 }
 abstract class abstractClasses.Person {
@@ -43,19 +38,15 @@ enum objects.DestinationEnum {
 +  DOWN
 - String destination
 }
-class objects.HandcraftsTextile {
+abstract class abstractClasses.Handcrafts {
 - String material
-+ String spoil()
-+ String toString()
++ String getMaterial()
 + boolean equals(Object)
 + int hashCode()
 }
-class objects.HandcraftsPaper {
-- String material
+class objects.Paper {
 + String spoil()
 + String toString()
-+ boolean equals(Object)
-+ int hashCode()
 }
 class objects.Door {
 - DestinationEnum destination
@@ -71,6 +62,13 @@ class objects.Stairs {
 + boolean equals(Object)
 + int hashCode()
 }
+interface interfaces.Spoilable {
++ {static} String desription
+~ String spoil()
+~ String toString()
+~ boolean equals(Object)
+~ int hashCode()
+}
 class people.Misa {
 + String sing()
 + String toString()
@@ -78,29 +76,29 @@ class people.Misa {
 class Main {
 + {static} void main(String[])
 }
-interface interfaces.Junk {
-+ {static} String desription
-~ String spoil()
-~ String toString()
-~ boolean equals(Object)
-~ int hashCode()
-}
 class people.Homsa {
 - int numberOfCookies
 + String eatCookies()
 + String addCookies(int)
 + String toString()
 }
+interface interfaces.DestinationChangeable {
+~ void changeDestination(String)
+~ String toString()
+~ boolean equals(Object)
+~ int hashCode()
+}
 
 
-interfaces.Junk <|.. objects.HandcraftsWood
+abstractClasses.Handcrafts <|-- objects.Textile
 abstractClasses.Person <|-- people.Hemyl
+abstractClasses.Handcrafts <|-- objects.Wood
 abstractClasses.Person <|-- people.PreviousOwners
 abstractClasses.Person <|-- people.Mymla
-interfaces.Junk <|.. objects.HandcraftsTextile
-interfaces.Junk <|.. objects.HandcraftsPaper
-interfaces.Location <|.. objects.Door
-interfaces.Location <|.. objects.Stairs
+interfaces.Spoilable <|.. abstractClasses.Handcrafts
+abstractClasses.Handcrafts <|-- objects.Paper
+interfaces.DestinationChangeable <|.. objects.Door
+interfaces.DestinationChangeable <|.. objects.Stairs
 abstractClasses.Person <|-- people.Misa
 abstractClasses.Person <|-- people.Homsa
 @enduml
