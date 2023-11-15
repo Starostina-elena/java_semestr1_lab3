@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public abstract class Person {
 
-    String person_action;
-    String original_person_action;
-    String name;
+    private String person_action;
+    private final String original_person_action;
+    private final String name;
     boolean madness = false;
 
     public Person(String name, String action) {

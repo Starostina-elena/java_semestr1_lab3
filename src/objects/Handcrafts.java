@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Handcrafts implements Junk {
 
-    String material;
+    private String material;
 
     public Handcrafts(String material) {
         this.material = material;

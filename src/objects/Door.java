@@ -22,7 +22,7 @@ enum DoorDestination {
 
 public class Door implements Location {
 
-    DoorDestination destination;
+    private DoorDestination destination;
 
     public Door(String destination) {
         if (Objects.equals(destination, "никуда")) {

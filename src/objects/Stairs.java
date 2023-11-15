@@ -23,7 +23,7 @@ enum StairsDestination {
 
 public class Stairs implements Location {
 
-    StairsDestination destination;
+    private StairsDestination destination;
 
     public Stairs(String destination) {
         if (Objects.equals(destination, "вверх")) {
