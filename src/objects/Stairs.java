@@ -5,47 +5,32 @@ import interfaces.Location;
 
 import java.util.Objects;
 
-enum StairsDestination {
-
-    UP("вверх"),
-    DOWN("вниз");
-
-    private String destination;
-
-    StairsDestination(String destination) {
-
-        this.destination = destination;
-
-    }
-
-}
-
 
 public class Stairs implements Location {
 
-    private StairsDestination destination;
+    private DestinationEnum destination;
 
     public Stairs(String destination) {
         if (Objects.equals(destination, "вверх")) {
-            this.destination = StairsDestination.UP;
+            this.destination = DestinationEnum.UP;
         }
         else {
-            this.destination = StairsDestination.DOWN;
+            this.destination = DestinationEnum.DOWN;
         }
     }
 
     public void changeDestination(String new_destination) {
         if (Objects.equals(new_destination, "вверх")) {
-            this.destination = StairsDestination.UP;
+            this.destination = DestinationEnum.UP;
         }
         else {
-            this.destination = StairsDestination.DOWN;
+            this.destination = DestinationEnum.DOWN;
         }
     }
 
     @Override
     public String toString() {
-        if (destination == StairsDestination.UP) {
+        if (destination == DestinationEnum.UP) {
             return "Лестница поднимается наверх, нет причин волноваться";
         }
         return "Хомса недоволен, лестница идет вниз. " +
